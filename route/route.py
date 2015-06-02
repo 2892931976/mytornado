@@ -5,6 +5,6 @@ import sys
 
 from controller.index import IndexHandler
 
-url=[
+handlers=[
     (r'/', IndexHandler),
     ]
