@@ -7,11 +7,12 @@ import tornado.web
 import os
 
 setting = {
-  "template_path":os.path.join(os.path.dirname(__file__),"template"),
-  "static_path":os.path.join(os.path.dirname(__file__),"static"),
+    "template_path":os.path.join(os.path.dirname(__file__),"template"),
+    "static_path":os.path.join(os.path.dirname(__file__),"static"),
+    "debug":True,
   }
 
 application = tornado.web.Application(
-    handlers=route.url,
+    handlers=route.handlers,
     **setting
   )
