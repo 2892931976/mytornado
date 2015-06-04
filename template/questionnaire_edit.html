@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="ThemeBucket">
+	<link rel="shortcut icon" href="#" type="image/png">
+
+	<title>编辑问卷调查</title>
+	
+	<!--multi-select-->
+    <link rel="stylesheet" type="text/css" href="js/jquery-multi-select/css/multi-select.css" />
+
+    <!--file upload-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-fileupload.min.css" />
+
+    <!--tags input-->
+    <link rel="stylesheet" type="text/css" href="js/jquery-tags-input/jquery.tagsinput.css" />
+    
+    <!--pickers css-->
+	  <link rel="stylesheet" type="text/css" href="js/bootstrap-datepicker/css/datepicker-custom.css" />
+	  <link rel="stylesheet" type="text/css" href="js/bootstrap-timepicker/css/timepicker.css" />
+	  <link rel="stylesheet" type="text/css" href="js/bootstrap-colorpicker/css/colorpicker.css" />
+	  <link rel="stylesheet" type="text/css" href="js/bootstrap-daterangepicker/daterangepicker-bs3.css" />
+	  <link rel="stylesheet" type="text/css" href="js/bootstrap-datetimepicker/css/datetimepicker-custom.css" />
+	  
+	  <link rel="stylesheet" type="text/css" href="js/bootstrap-wysihtml5/bootstrap-wysihtml5.css" />
+
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style-responsive.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="sticky-header">
+
+	<section>
+		<!-- left side start-->
+		<div class="left-side sticky-left-side">
+
+			<!--logo and iconic logo start-->
+			<div class="logo">
+				<a href="index.html"><img src="images/logo.png" alt="">
+				</a>
+			</div>
+
+			<div class="logo-icon text-center">
+				<a href="index.html"><img src="images/logo_icon.png" alt="">
+				</a>
+			</div>
+			<!--logo and iconic logo end-->
+
+
+			<div class="left-side-inner">
+
+				<!-- visible to small devices only -->
+				<div class="visible-xs hidden-sm hidden-md hidden-lg">
+					<div class="media logged-user">
+						<div class="media-body">
+							<h4><a href="#">admin</a></h4>
+						</div>
+					</div>
+
+					<h5 class="left-nav-title">帐户信息</h5>
+					<ul class="nav nav-pills nav-stacked custom-nav">
+						<li><a href="#"><i class="fa fa-cog"></i> <span>设置</span></a>
+						</li>
+						<li><a href="#"><i class="fa fa-sign-out"></i> <span>注销</span></a>
+						</li>
+					</ul>
+				</div>
+
+				<!--sidebar nav start-->
+				<ul class="nav nav-pills nav-stacked custom-nav">
+					
+					<li><a href="index.html"><i class="fa fa-home"></i> <span>欢迎页</span></a></li>
+					
+					<li class="menu-list"><a href="management_review.html"><i class="fa fa-laptop"></i> <span>节目管理</span></a>
+						<ul class="sub-menu-list">
+							<li class="active"><a href="management_playbill.html">节目单管理</a>
+							</li>
+							<li><a href="management_selected.html">精选管理</a>
+							</li>
+						</ul>
+					</li>
+					
+					<li class="menu-list"><a href="management_review.html"><i class="fa fa-laptop"></i> <span>评论管理</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="management_review.html">评论管理</a>
+							</li>
+							<li><a href="keywords.html">关键词库</a>
+							</li>
+						</ul>
+					</li>
+					
+					<li class="menu-list"><a href="m"><i class="fa fa-cogs"></i> <span>活动管理</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="management_activity.html">活动管理</a>
+							</li>
+							<li><a href="management_hongniang.html">红娘活动</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="menu-list"><a href=""><i class="fa fa-tasks"></i> <span>用户积分管理</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="management_user_points.html">用户积分</a>
+							</li>
+							<li><a href="management_prizes.html">积分奖品管理</a>
+							</li>
+							<li><a href="winning_record.html">获奖记录</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-active menu-list"><a href=""><i class="fa fa-bar-chart-o"></i> <span>其他</span></a>
+						<ul class="sub-menu-list">
+							<li><a href="other_phonograph.html">乱弹留声机</a></li>
+							<li><a href="other_feedback.html">意见反馈</a></li>
+							<li><a href="other_vote.html">投票管理</a></li>
+							<li class="active"><a href="other_questionnaire.html">问卷调查</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+				<!--sidebar nav end-->
+
+			</div>
+		</div>
+		<!-- left side end-->
+
+		<!-- main content start-->
+		<div class="main-content">
+
+			<!-- header section start-->
+			<div class="header-section">
+
+				<!--toggle button start-->
+				<a class="toggle-btn"><i class="fa fa-bars"></i></a>
+				<!--toggle button end-->
+
+				<!--notification menu start -->
+				<div class="menu-right">
+					<ul class="notification-menu">
+
+						<li>
+							<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">admin
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+								<li><a href="#"><i class="fa fa-cog"></i>设置</a>
+								</li>
+								<li><a href="#"><i class="fa fa-sign-out"></i>注销</a>
+								</li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+				<!--notification menu end -->
+
+			</div>
+			<!-- header section end-->
+			<!-- page heading start-->
+			<div class="page-heading">
+				<h3>
+                管理用户问卷调查
+            </h3>
+				<ul class="breadcrumb">
+					<li>
+						<a href="index.html">欢迎页</a>
+					</li>
+					<li>
+						<a href="">其他</a>
+					</li>
+					<li>
+						<a href="other_vote.html">问卷调查</a>
+					</li>
+					<li class="active">编辑问卷信息</li>
+				</ul>
+			</div>
+			<!-- page heading end-->
+
+			<!--body wrapper start-->
+			<div class="wrapper">
+
+				<div class="row">
+					<div class="col-lg-12">
+						<section class="panel">
+							<header class="panel-heading">
+								编辑信息
+								<span class="tools pull-right">
+									<a class="fa fa-chevron-down" href="javascript:;"></a>
+								</span>
+							</header>
+							<div class="panel-body">
+								<div class="form">
+									<form class="cmxform form-horizontal adminex-form" id="signupForm" method="get" action="">
+									
+										<div class="form-group ">
+											<label for="lastname" class="control-label col-lg-2">问卷主题</label>
+											<div class="col-lg-10">
+												<input class=" form-control" id="" name="" type="text" value="" />
+											</div>
+										</div>
+										
+										<div class="form-group" id="question-container">
+											<div class="form-group well" style="margin:10px;padding-bottom:15px;">
+												<label for="lastname" class="control-label col-lg-2">问题</label>
+												<div class="col-lg-10 col-md-10">
+													<div class="col-lg-12 col-md-12">
+														<div class="form-group">
+															<label for="" class="control-label col-lg-1">类型</label>
+															<div class="col-lg-4">
+																<select class="form-control valid">
+																	<option>选择题</option>
+																	<option>选择题</option>
+																	<option>选择题</option>
+																</select>
+															</div>
+															<div class="col-lg-6">
+																<label for="" class="control-label pull-left">最多选择</label>
+																<div class="col-md-6 col-lg-6">
+																	<input class="form-control" id="" name="" type="text" value=""/>
+																</div>											
+																<label for="" class="control-label">项</label>
+															</div>		
+														</div>																	
+													</div>											
+													<div class="col-lg-12 col-md-12 question-section" style="margin-top:10px;">
+														<div class="form-group" style="padding-bottom:0;border:none;">
+															<label for="" class="control-label col-lg-1">标题</label>
+															<div class="col-lg-4">
+																<input class=" form-control" id="" name="" type="text" value="" />
+															</div>
+														</div>
+														<div class="form-group" style="padding-bottom:0;border:none;">
+															<label for="" class="control-label col-lg-1">选项1</label>
+															<div class="col-lg-4">
+																<input class=" form-control" id="" name="" type="text" value="" />
+															</div>
+															<button class="btn btn-primary add-option" type="button">+</button>						
+														</div>																					
+													</div>
+												</div>										
+											</div>
+										</div>
+																											
+										<div class="form-group">
+											<div class="col-md-2">
+												<button id="addNewQuestion" class="btn btn-default">新增问题</button>
+											</div>										
+										</div>
+										
+										<div class="form-group ">
+											<label for="lastname" class="control-label col-lg-2">问卷时间</label>
+											<div class="col-lg-10">
+												<div class="input-group bootstrap-timepicker">
+													<input type="text" class="form-control form_datetime" readonly placeholder="开始时间" style="float:none;width:150px;">
+													<span style="margin:0 10px;"> 至 </span>
+													<input type="text" class="form-control form_datetime" readonly placeholder="结束时间" style="float:none;width:150px;">
+												</div>
+											</div>
+										</div>
+										
+										<div class="form-group ">
+											<label for="lastname" class="control-label col-lg-2">问卷地址</label>
+											<div class="col-lg-10">
+												<label for="" class="control-label pull-left">http://www.xxx.com/toupiao/</label>
+												<input class="form-control" id="" name="" type="text" value="" style="width:30%;margin-right:10px;"/>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<div class="col-lg-offset-2 col-lg-10">
+												<button class="btn btn-primary" type="submit">保存</button>
+												<button class="btn btn-default" type="button">取消</button>
+											</div>
+										</div>
+										
+									</form>
+								</div>
+							</div>
+						</section>
+						
+						<section class="panel">
+							<header class="panel-heading">
+								问卷结果
+								<span class="tools pull-right">
+									<a class="fa fa-chevron-down" href="javascript:;"></a>
+								</span>
+							</header>
+							<div class="panel-body">
+								<button id="editable-sample_new" class="btn btn-primary">
+									Save as CSV
+								</button>
+								<div class="panel-body editable-table">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>问题名称</th>
+												<th>选项1</th>
+												<th>占比</th>
+												<th>选项2</th>
+												<th>占比</th>
+												<th>选项3</th>
+												<th>占比</th>
+												<th>选项4</th>
+												<th>占比</th>
+												<th>选项5</th>
+												<th>占比</th>
+												<th>置顶</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>选项一</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td><a class="" href="">Top</a></td>
+											</tr>
+											<tr>
+												<td>选项一</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td>20</td>
+												<td>20%</td>
+												<td><a class="" href="">Top</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+						
+						<section class="panel">
+							<header class="panel-heading">
+								问卷明细
+								<span class="tools pull-right">
+									<a class="fa fa-chevron-down" href="javascript:;"></a>
+								</span>
+							</header>
+							<div class="panel-body">
+								<div class="btn-group pull-right">
+									<form class="form-inline">
+										<div class="form-group">
+											<label for="exampleInputName2">Search：</label>
+											<input type="text" class="form-control" placeholder="请输入微信号" style="width:350px;">
+										</div>
+									</form>
+								</div>
+								<div class="panel-body editable-table">
+									<table class="table">
+										<thead>
+											<tr>
+												<th>微信号</th>
+												<th>问题1</th>
+												<th>问题2</th>
+												<th>问题3</th>
+												<th>问题4</th>
+												<th>问题5</th>
+												<th>问题6</th>
+												<th>问题7</th>
+												<th>问题8</th>
+												<th>问题9</th>
+												<th>问题10</th>
+												<th>参与时间</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Kaxim.Wang</td>
+												<td>1</td>
+												<td>1,2</td>
+												<td>3</td>
+												<td>3,4</td>
+												<td>5,6</td>
+												<td>1</td>
+												<td>1,2</td>
+												<td>3</td>
+												<td>3,4</td>
+												<td>5,6</td>
+												<td>2015-04-28 15:21:44</td>
+											</tr>
+											<tr>
+												<td>Kaxim.Wang</td>
+												<td>1</td>
+												<td>1,2</td>
+												<td>3</td>
+												<td>3,4</td>
+												<td>5,6</td>
+												<td>1</td>
+												<td>1,2</td>
+												<td>3</td>
+												<td>3,4</td>
+												<td>5,6</td>
+												<td>2015-04-28 15:21:44</td>
+											</tr>
+										</tbody>
+									</table>
+									<div class="panel-body">
+										<ul class="pagination pull-right" style="margin:0;">
+											<li><a href="#">«</a></li>
+											<li><a href="#">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li><a href="#">»</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!--body wrapper end-->
+
+		</div>
+		<!-- main content end-->
+	</section>
+
+	<!-- Placed js at the end of the document so the pages load faster -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/modernizr.min.js"></script>
+	<script src="js/jquery.nicescroll.js"></script>
+
+	<!--ios7-->
+	<script src="js/ios-switch/switchery.js"></script>
+	<script src="js/ios-switch/ios-init.js"></script>
+
+	<!--icheck -->
+	<script src="js/iCheck/jquery.icheck.js"></script>
+	<script src="js/icheck-init.js"></script>
+	<!--multi-select-->
+	<script type="text/javascript" src="js/jquery-multi-select/js/jquery.multi-select.js"></script>
+	<script type="text/javascript" src="js/jquery-multi-select/js/jquery.quicksearch.js"></script>
+	<script src="js/multi-select-init.js"></script>
+	<!--spinner-->
+	<script type="text/javascript" src="js/fuelux/js/spinner.min.js"></script>
+	<script src="js/spinner-init.js"></script>
+	<!--file upload-->
+	<script type="text/javascript" src="js/bootstrap-fileupload.min.js"></script>
+	<!--tags input-->
+	<script src="js/jquery-tags-input/jquery.tagsinput.js"></script>
+	<script src="js/tagsinput-init.js"></script>
+	<!--bootstrap input mask-->
+	<script type="text/javascript" src="js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+	
+	<!--pickers plugins-->
+	<script type="text/javascript" src="js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-daterangepicker/moment.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+	<script type="text/javascript" src="js/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+	
+	<script type="text/javascript" src="js/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+
+	<!--pickers initialization-->
+	<script src="js/pickers-init.js"></script>
+
+	<!--common scripts for all pages-->
+	<script src="js/scripts.js"></script>
+	
+	<script>
+		jQuery(document).ready(function(){
+						
+			var optionNum = 1;
+			var questionTemplet = '<div class="form-group well" style="margin:10px;padding-bottom:15px;">' +
+											'<label for="lastname" class="control-label col-lg-2">问题</label>' +
+											'<div class="col-lg-10 col-md-10">' +
+												'<div class="col-lg-12 col-md-12">' +
+													'<div class="form-group">' +
+														'<label for="" class="control-label col-lg-1">类型</label>' +
+														'<div class="col-lg-4">' +
+															'<select class="form-control valid">' +
+																'<option>选择题</option>' +
+																'<option>选择题</option>' +
+																'<option>选择题</option>' +
+															'</select>' +
+														'</div>' +
+														'<div class="col-lg-6">' +
+															'<label for="" class="control-label pull-left">最多选择</label>' +
+															'<div class="col-md-6 col-lg-6">' +
+																'<input class="form-control" id="" name="" type="text" value=""/>' +
+															'</div>' +									
+															'<label for="" class="control-label">项</label>' +
+														'</div>' +
+														'<div class="pull-right">' +
+															'<a href="" class="delete-question" style="color:red;">删除问题</a>' +
+														'</div>' +
+													'</div>' +															
+												'</div>' +							
+												'<div class="col-lg-12 col-md-12 question-section" style="margin-top:10px;">' +
+													'<div class="form-group" style="padding-bottom:0;border:none;">' +
+														'<label for="" class="control-label col-lg-1">标题</label>' +
+														'<div class="col-lg-4">' +
+															'<input class=" form-control" id="" name="" type="text" value="" />' +
+														'</div>' +
+													'</div>' +
+													'<div class="form-group"style="padding-bottom:0;border:none;">' +
+														'<label for="" class="control-label col-lg-1">选项1</label>' +
+														'<div class="col-lg-4">' +
+															'<input class=" form-control" id="" name="" type="text" value="" />' +
+														'</div>' +
+														'<button class="btn btn-primary add-option" type="button">+</button>' +					
+													'</div>' +																							
+												'</div>' +
+											'</div>' +								
+										'</div>';
+			
+			/* 新增问题 */
+			$("#addNewQuestion").on('click', function(e) {		
+				e.preventDefault();
+				$("#question-container").append(questionTemplet);
+			});
+			
+			
+			/* 新增选项 */
+			$(".add-option").live('click', function() {
+				var optionTemplet = '<div class="form-group parent-option"style="padding-bottom:0;border:none;">' +
+										'<label for="" class="control-label col-lg-1">选项' + (++optionNum) + '</label>' +
+										'<div class="col-lg-4">' +
+											'<input class=" form-control" id="" name="" type="text" value="" />' +
+										'</div>' +
+										'<button class="btn btn-danger delete-option" type="button" style="width:34px;">-</button>' +					
+									 '</div>';
+				$(this).parents(".question-section").append(optionTemplet);
+			});
+			
+			
+			/* 删除一个问题 */
+			$(".delete-question").live('click', function(e) {
+				e.preventDefault();
+				if(confirm("确定删除此问题吗？") == true) {
+					$(this).parents(".well").remove();
+				} else {
+					return;
+				}		
+			});
+			
+			/* 删除一条选项 */
+			$(".delete-option").live('click', function() {
+				if(confirm("确定删除此选项吗？") == true) {
+					$(this).parents(".parent-option").remove();
+				} else {
+					return;
+				}		
+			});
+			
+		})
+	</script>
+
+</body>
+
+</html>

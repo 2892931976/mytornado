@@ -8,4 +8,4 @@ import sys
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
         lst = ["python","http://www.cnblogs.com/benlightning/","benlightning@gmail.com"]
-        self.render("index.html", info=lst)
+        self.render("index-test.html", info=lst)
