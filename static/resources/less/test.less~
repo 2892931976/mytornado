@@ -1,0 +1,11 @@
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#header {
+  color: @light-blue;
+}
+#color{
+  background:#ff999;
+color:red;
+  border:1px;  
+}
