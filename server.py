@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-#coding:utf-8
+# coding:utf-8
 
+import sys
 import tornado.ioloop
 import tornado.options
 import tornado.httpserver
 
-import sys
 
 import application
 
