@@ -3,115 +3,17 @@ Template Name: tornado bootstrap Dashboard
 Author: zhanglei
 -------------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 /*
  * Base structure
+ * Global add-ons
  */
-
-/* Move down content because we have a fixed navbar that is 50px tall */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #7a7676;
-    /*line-height: 20px;*/
     padding-top: 50px;
     overflow-x: hidden;
     font-size: 14px;
 }
-
-input, select, textarea {
-    font-family: 'Open Sans', sans-serif;
-    color: #767676;
-}
-
-a {
-    color: #65CEA7;
-}
-
-a:focus, a:active, a:hover {
-    outline: none;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    color: #353F4F;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Open Sans', sans-serif;
-}
-
-.mtop10 {
-    margin-top: 10px;
-}
-
-hr {
-    border-color: #ddd;
-}
-.text-center{
-	text-align:center;
-}
-
-/*---------------------------
-    ERROR PAGE STYLES
-----------------------------*/
-
-.error-page {
-    background: #6bc5a4;
-}
-
-.error-wrapper {
-    margin-top: 1%;
-}
-
-.error-wrapper h2 {
-    font-size: 64px;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.error-wrapper h3 {
-    font-size: 32px;
-    color: #474747;
-    text-transform: uppercase;
-    font-weight: bold;
-    line-height: 30px;
-    margin-top: 0;
-}
-
-.error-wrapper .nrml-txt {
-    font-size: 18px;
-    color: #474747;
-    font-weight: normal;
-    line-height: 30px;
-}
-
-.error-wrapper .nrml-txt a {
-    color: #a7ffdf;
-}
-
-.error-wrapper .back-btn {
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 20px;
-    margin-top: 50px;
-
-}
-
-.error-wrapper .back-btn:hover {
-    background: #fff;
-    color: #6bc5a4;
-    border-color: #fff;
-}
-
-/*
- * Global add-ons
- */
-
 .sub-header {
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;

@@ -1,17 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
-  <meta name="author" content="ThemeBucket">
+  <meta name="author" content="benlightning@outlook.com">
   <link rel="shortcut icon" href="#" type="image/png">
 
   <title>500 Page</title>
+<style type="text/css">
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #7a7676;
+    padding-top: 50px;
+    overflow-x: hidden;
+    font-size: 14px;
+}
 
-  <link href="{{ static_url('css/style.css') }}" rel="stylesheet">
-  <link href="{{ static_url('css/style-responsive.css') }}" rel="stylesheet">
+input, select, textarea {
+    font-family: 'Open Sans', sans-serif;
+    color: #767676;
+}
 
+a {
+    color: #65CEA7;
+}
+
+a:focus, a:active, a:hover {
+    outline: none;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #353F4F;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mtop10 {
+    margin-top: 10px;
+}
+
+hr {
+    border-color: #ddd;
+}
+.text-center{
+  text-align:center;
+}
+
+/*---------------------------
+    ERROR PAGE STYLES
+----------------------------*/
+
+.error-page {
+    background: #6bc5a4;
+}
+
+.error-wrapper {
+    margin-top: 1%;
+}
+
+.error-wrapper h2 {
+    font-size: 64px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.error-wrapper h3 {
+    font-size: 32px;
+    color: #474747;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 30px;
+    margin-top: 0;
+}
+
+.error-wrapper .nrml-txt {
+    font-size: 18px;
+    color: #474747;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.error-wrapper .nrml-txt a {
+    color: #a7ffdf;
+}
+
+.error-wrapper .back-btn {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 50px;
+
+}
+
+.error-wrapper .back-btn:hover {
+    background: #fff;
+    color: #6bc5a4;
+    border-color: #fff;
+}
+</style>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="{{ static_url('js/html5shiv.js') }}"></script>
