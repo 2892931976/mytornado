@@ -3,8 +3,11 @@
 
 import sys
 
-from controller.index import IndexHandler
+import controller.index as index
+
+import controller.public as public
 
 handlers=[
-    (r'/', IndexHandler),
+    (r'/', index.IndexHandler),
+    (r'/login',public.LoginHandler),
     ]

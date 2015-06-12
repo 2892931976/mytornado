@@ -87,6 +87,13 @@ body {
     transition: all 0.3s;
     font-size: 30px;
 }
+.form-signin .form-signin-heading {
+    margin: 0;
+    padding: 25px 15px;
+    text-align: center;
+    color: red;
+    position: relative;
+}
 </style>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -99,10 +106,13 @@ body {
 
 <div class="container">
 
-    <form class="form-signin" action="index.html">
+    <form class="form-signin" action="/login" method="post">
+        <div class="form-signin-heading text-center">
+            welecome to backend<!--<img src="images/login-logo.png" alt="">-->
+        </div>
         <div class="login-wrap">
-            <input type="text" class="form-control" placeholder="账号" autofocus>
-            <input type="password" class="form-control" placeholder="密码">
+            <input name="username" type="text" class="form-control" placeholder="账号" autofocus>
+            <input name="password" type="password" class="form-control" placeholder="密码">
 
             <button class="btn btn-lg btn-login btn-block" type="submit">
                 login
