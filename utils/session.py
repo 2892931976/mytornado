@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # coding:utf-8
 
-# -*- coding: utf-8 -*-
-
 from hashlib import sha1
 
 import os, time
