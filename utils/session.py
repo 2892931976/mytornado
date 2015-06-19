@@ -3,9 +3,11 @@
 
 from hashlib import sha1
 
-import os, time
+import os
+import time
 
-session_id = lambda: sha1('%s%s' % (os.urandom(16), time.time())).hexdigest()
+
+session_id = lambda: sha1(str('%s%s' % (os.urandom(16), time.time())).encode('utf-8')).hexdigest()
 
 
 class SessionHandler(object):
