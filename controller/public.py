@@ -6,7 +6,9 @@ import tornado.web
 
 
 class LoginHandler(tornado.web.RequestHandler):
-    """docstring for baseHandler"""
+
+    """docstring for LoginHandler"""
+
     def initialize(self):
         redis = self.application.redis
         self.session = self.application.SessionHandler(self, redis, session_lifetime=20)
