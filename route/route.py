@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#coding:utf-8
+# -*- coding:utf-8 -*-
 
 import controller.index as index
 import controller.public as public
@@ -8,4 +8,5 @@ import controller.public as public
 handlers = [
     (r'/', index.IndexHandler),
     (r'/login', public.LoginHandler),
+    (r'/logout', public.LogoutHandler),
     ]

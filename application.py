@@ -17,12 +17,12 @@ setting = {
     # 跨站伪造请求(Cross-site request forgery) 防范策略 xsrf_cookies
     # "xsrf_cookies": "Ture",
     "login_url": "/login",
-  }
+    }
 
 application = tornado.web.Application(
     route.handlers,
     **setting
-  )
+    )
 
 application.redis = client.Redis()
 application.SessionHandler = SessionHandler
